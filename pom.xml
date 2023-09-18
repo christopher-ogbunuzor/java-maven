@@ -78,7 +78,7 @@
        <repository>
            <id>github</id>
            <name>GitHub</name>
-           <url>https://maven.pkg.github.com/bmvermeer/ghaction-example</url>
+           <url>https://maven.pkg.github.com/christopher-ogbunuzor/java-maven</url>
        </repository>
    </distributionManagement>
 
