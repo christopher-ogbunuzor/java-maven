@@ -10,7 +10,7 @@ env:
  SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
 jobs:
-  build_and_test:
+  build-and-test:
 
     runs-on: ubuntu-latest
 
@@ -44,6 +44,17 @@ jobs:
 
   opensource-security-scanning:
   # this job will run in parallel
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/maven@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: code test
+
+  code-security-scanning:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
