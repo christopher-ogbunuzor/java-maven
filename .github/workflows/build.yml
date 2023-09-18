@@ -101,7 +101,7 @@ jobs:
     #     run: docker push ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}:latest
 
   release:
-    needs: [opensource-security-scanning, code-security-scanning, build]
+    needs: [opensource-security-scanning, code-security-scanning, build-and-test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
