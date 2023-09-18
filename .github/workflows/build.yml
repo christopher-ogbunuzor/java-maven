@@ -22,7 +22,7 @@ jobs:
       uses: trstringer/manual-approval@v1
       with:
         secret: ${{ github.TOKEN }}
-        approvers: ${{ github.actor }}
+        # approvers: ${{ github.actor }}
         minimum-approvals: 1
         issue-title: "Building Maven project"
         issue-body: "Please approve or deny based on Snyk test results"
