@@ -70,4 +70,16 @@
         </dependency>
     </dependencies>
 
+    <scm>
+       <developerConnection>scm:git:https://github.com/bmvermeer/ghaction-example.git</developerConnection>
+       <tag>HEAD</tag>
+   </scm>
+   <distributionManagement>
+       <repository>
+           <id>github</id>
+           <name>GitHub</name>
+           <url>https://maven.pkg.github.com/bmvermeer/ghaction-example</url>
+       </repository>
+   </distributionManagement>
+
 </project>
