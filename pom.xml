@@ -4,7 +4,7 @@
 
     <groupId>org.kth</groupId>
     <artifactId>github-action-maven-tutorial</artifactId>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -70,7 +70,7 @@
 
     <scm> 
        <developerConnection>scm:git:https://github.com/christopher-ogbunuzor/java-maven.git</developerConnection>
-       <tag>github-action-maven-tutorial-1.1</tag>
+       <tag>HEAD</tag>
    </scm>
    <distributionManagement>
        <repository>
