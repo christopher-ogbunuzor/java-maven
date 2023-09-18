@@ -70,8 +70,8 @@
         </dependency>
     </dependencies>
 
-    <scm>
-       <developerConnection>scm:git:https://github.com/bmvermeer/ghaction-example.git</developerConnection>
+    <scm> 
+       <developerConnection>scm:git:https://github.com/christopher-ogbunuzor/java-maven.git</developerConnection>
        <tag>HEAD</tag>
    </scm>
    <distributionManagement>
