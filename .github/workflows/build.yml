@@ -37,10 +37,22 @@ jobs:
         node-version: 14
     - name: install Snyk CLI
       run: npm install -g snyk
-    - name: run Snyk Open Source Test
+    - name: Snyk Open Source Dependencies Test
       run: snyk test
-    - name: run Snyk Code Test
+    - name: Snyk Application Code Test
       run: snyk code test
+
+  opensource-security-scanning:
+  # this job will run in parallel
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/maven@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: code test
 
   # publish-job:
   #   runs-on: ubuntu-latest
